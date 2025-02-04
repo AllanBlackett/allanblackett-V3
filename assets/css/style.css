@@ -1,0 +1,393 @@
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-358 {
+        /* Centers button */
+        text-align: center;
+        /* 150px - 350px */
+        padding: clamp(9rem, 25.95vw, 21.875rem) 1rem;
+        padding-bottom: 0;
+        position: relative;
+        z-index: 1;
+        /* prevents overflow from the lines extending past the screen width */
+        overflow: hidden;
+    }
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-1em);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-1em);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    #hero-358 .cs-background {
+        /* Background Image */
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    #hero-358 .cs-background:before {
+        /* White Color Overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0.85;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /* prevents the cursor from interacting with it */
+        pointer-events: none;
+    }
+    #hero-358 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes image act like a background-image */
+        object-fit: cover;
+        /* places the top of the image at the top of the parent */
+        object-position: top;
+    }
+    #hero-358 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+    }
+    #hero-358 .cs-flex-group {
+        max-width: 39.125rem;
+        margin: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    #hero-358 .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+    #hero-358 .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 1rem;
+        color: var(--headerColor);
+        position: relative;
+    }
+    #hero-358 .cs-accent {
+        color: var(--primaryLight);
+    }
+    #hero-358 .cs-text {
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        text-align: center;
+        width: 100%;
+        /* changes to 442px at desktop */
+        max-width: 43.75rem;
+        /* 32px - 40px */
+        margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+        /* 24px - 40px */
+        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+        color: var(--bodyTextColor);
+    }
+    #hero-358 .cs-button-group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    #hero-358 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: 11.25rem;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        /* clips corners of the before element */
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0;
+        background-color: var(--secondary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+    }
+    #hero-358 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    #hero-358 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #hero-358 .cs-button-transparent {
+        text-decoration: none;
+        width: auto;
+        /* 46px - 56px */
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin: 0;
+        padding: 0;
+        color: var(--primaryLight);
+        background-color: transparent;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    #hero-358 .cs-button-transparent:before {
+        /* white hover box */
+        content: "";
+        /* 46px - 56px */
+        width: clamp(2.875em, 5.5vw, 3.5em);
+        background: #fff;
+        border-radius: 2.5rem;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: -6px;
+        bottom: -6px;
+        left: 6px;
+        z-index: -1;
+        transition:
+            width 0.3s,
+            box-shadow 0.3s;
+    }
+    #hero-358 .cs-button-transparent:hover:before {
+        width: 107%;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    #hero-358 .cs-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    #hero-358 .cs-tag {
+        font-size: 0.875rem;
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: 0.25rem;
+        color: #767676;
+    }
+    #hero-358 .cs-number {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 0.25rem;
+        color: var(--headerColor);
+    }
+    #hero-358 .cs-picture {
+        /* 46px - 56px */
+        width: clamp(2.875rem, 5.5vw, 3.5rem);
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin-right: 0.5rem;
+        background-color: var(--primaryLight);
+        border-radius: 50%;
+        border: 6px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #hero-358 .cs-img {
+        width: 1.5rem;
+        height: auto;
+    }
+    #hero-358 .cs-image-group {
+        font-size: min(1.6vw, 0.7em);
+        /* using ems so we can scale this container with a font size */
+        width: 51.9375em;
+        height: 42.125em;
+        position: relative;
+    }
+    #hero-358 .cs-splash {
+        position: absolute;
+        width: 49.4375em;
+        height: 38.5em;
+        top: 1.25em;
+        right: -2.5em;
+    }
+    #hero-358 .cs-person {
+        width: auto;
+        height: 100%;
+        position: relative;
+    }
+    #hero-358 .cs-person img {
+        width: 100%;
+        height: auto;
+    }
+    #hero-358 .cs-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7.5em;
+        height: 7.5em;
+        border-radius: 50%;
+        background-color: var(--primaryLight);
+        position: absolute;
+        left: 8.125em;
+        bottom: 3.8125em;
+        z-index: 100;
+        animation-name: floatAnimation2;
+        animation-duration: 4s;
+        animation-delay: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    #hero-358 .cs-icon {
+        width: 3.25em;
+        height: auto;
+    }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #hero-358 {
+        padding-bottom: 10rem;
+    }
+    #hero-358 .cs-container {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #hero-358 .cs-flex-group {
+        justify-content: flex-start;
+        margin: 0;
+    }
+    #hero-358 .cs-topper,
+    #hero-358 .cs-title,
+    #hero-358 .cs-text {
+        text-align: left;
+        margin-left: 0;
+    }
+    #hero-358 .cs-text {
+        max-width: 27.625rem;
+    }
+    #hero-358 .cs-button-group {
+        justify-content: flex-start;
+    }
+    #hero-358 .cs-image-group {
+        font-size: min(1.4vw, 1em);
+        position: absolute;
+        bottom: -9.375em;
+        right: -13.5625em;
+    }
+}
+
+                                

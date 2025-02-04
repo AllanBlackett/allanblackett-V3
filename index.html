@@ -9,50 +9,87 @@
 </head>
 <body>
 
+    
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-358">
+<section id="hero-1115">
     <div class="cs-container">
-        <div class="cs-flex-group">
-            <span class="cs-topper">Professional</span>
-            <h1 class="cs-title">Quality Solutions in Home Cleaning</h1>
+        <div class="cs-content">
+            <span class="cs-topper">Join The Cause</span>
+            <h1 class="cs-title">Lend a Helping Hand to Those in Need</h1>
             <p class="cs-text">
-                We are committed to the best quality in the field of industrial cleaning, home and garden cleaning.
+                We help companies develop powerful corporate social responsibility, grant making, and employee engagement strategies.
             </p>
-            <div class="cs-button-group">
-                <a href="" class="cs-button-solid">Get Started</a>
-                <a href="" class="cs-button-transparent">
-                    <picture class="cs-picture">
-                        <img class="cs-img" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/phone-white.svg" alt="icon" width="24" height="24" aria-hidden="true">
-                    </picture>
-                    <div class="cs-content">
-                        <span class="cs-tag">Call Anytime</span>
-                        <span class="cs-number">(+123) 5462 3257</span>
-                    </div>
-                </a>
-            </div>
+            <a href="" class="cs-button-solid">Donate Now</a>
         </div>
-        <div class="cs-image-group">
-            <!--Icon Cirlce Group-->
-            <picture class="cs-icon-wrapper">
-                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/mop-white.svg" alt="icon" width="52" height="52" aria-hidden="true">
-            </picture>
-
-            <!-- SVG Paint Splash-->
-            <img class="cs-splash" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/paint-splash.svg" alt="icon" width="792" height="616" aria-hidden="true">
-
-            <!-- Maid Picture -->
-            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
-            <picture class="cs-person">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/maid.png">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/maid.png">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/maid.png" alt="maid" width="831" height="674">
-            </picture>
+        <!--Hero Image-->
+        <!--We need a wrapper div around the image group so the volunteer box can be relatively positioned on mobile to make stacking the design easier -->
+        <div class="cs-image-group-wrapper">
+            <div class="cs-image-group" aria-hidden="true">
+                <!--We have two images, one with a border radius on the bottom and one without. We place them on top of each other so the top picture can appear to overlap the curved one. We did this so you should be able to add any new image you want to use and it should work with minimal editing -->
+                <!--Use https://www.remove.bg/ remove the background of any images and make new PNG images to replace our default ones-->
+                <!--Non Masked Image-->
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-m.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.png">
+                    <img decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.png" alt="people" width="651" height="523">
+                </picture>
+                <!--Masked image with border radius on bottom-->
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-m.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.png">
+                    <img decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.png" alt="people" width="651" height="523">
+                </picture>
+                <!--Floating Icon-->
+                <picture class="cs-floater" aria-hidden="true">
+                    <img class="cs-floater-icon" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/charity2.svg" alt="icon" width="52" height="52">
+                </picture>
+                <!--Donations Box-->
+                <div class="cs-donations">
+                    <picture class="cs-donations-icon-wrapper">
+                        <img class="cs-donations-icon" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hand-heart.svg" alt="icon" width="22" height="22">
+                    </picture>
+                    <div class="cs-donations-flex">
+                        <span class="cs-header">Total Goal</span>
+                        <div class="cs-bar">
+                            <!--change the --progress number to match the percentage in cs-number-->
+                            <div class="cs-progress" aria-hidden="true">
+                                <span class="cs-progress-bar"  style="--progress: 65%"></span>
+                            </div>
+                            <span class="cs-percentage">65%</span>
+                        </div>
+                    </div>
+                </div>
+                <!--Ying Yang Graphics-->
+                <!--Top Graphic-->
+                <img class="cs-graphic cs-graphic1" aria-hidden="true" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/yellow-graphic.svg" alt="icon" width="586" height="356">
+                <!--Bottom Graphic-->
+                <img class="cs-graphic cs-graphic2" aria-hidden="true" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/green-graphic.svg" alt="icon" width="586" height="356">
+            </div>
+            <!--Volunteer Box-->
+        <div class="cs-volunteer" aria-hidden="true">
+            <span class="cs-header">Join Our Volunteers</span>
+            <div class="cs-volunteer-flex">
+                <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hero-profile1.png" alt="icon" width="48" height="48">
+                <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hero-profile2.png" alt="icon" width="48" height="48">
+                <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hero-profile3.png" alt="icon" width="48" height="48">
+                <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hero-profile4.png" alt="icon" width="48" height="48">
+                <img class="cs-volunteer-img" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hero-profile5.png" alt="icon" width="48" height="48">
+                <span class="cs-volunteer-number">+4k</span>
+            </div>
+            <!--Squiggly Arrow-->
+            <img class="cs-arrow" decoding="async" fetchpriority="high" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sqiggly-arrow.svg" alt="icon" width="48" height="48">
+        </div>
         </div>
     </div>
 </section>
+                                
                                 
 
 

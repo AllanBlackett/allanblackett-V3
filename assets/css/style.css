@@ -228,12 +228,17 @@ body {
         display: block;
         height: 100%;
         width: 0%;
-        background: #000;
+        background: #fff;
         opacity: 1;
         top: 0;
         left: 0;
         z-index: -1;
         transition: width 0.3s;
+    }
+
+    #hero-358 .cs-button-solid:hover {
+    color:#1a1a1a;
+    transition: 1s;
     }
     #hero-358 .cs-button-solid:hover:before {
         width: 100%;
@@ -272,6 +277,9 @@ body {
             width 0.3s,
             box-shadow 0.6s;
     }
+    #hero-358 .cs-button-transparent:hover .cs-number {
+        color: #1a1a1a;
+    }
     #hero-358 .cs-button-transparent:hover:before {
         width: 107%;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -296,7 +304,10 @@ body {
         font-weight: 700;
         margin: 0;
         margin-bottom: 0.25rem;
-        color: var(--headerColor);
+        color: #fafbfc;
+    }
+    #hero-358 .cs-number:hover {
+        color:#1a1a1a;
     }
     #hero-358 .cs-picture {
         /* 46px - 56px */
@@ -357,9 +368,10 @@ body {
         animation-iteration-count: infinite;
     }
     #hero-358 .cs-icon {
-        width: 3.25em;
-        height: auto;
+        font-size: clamp(1.5rem, 5vw, 3.25rem); /* Scales dynamically */
+        color: #fff;
     }
+    
 }
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {

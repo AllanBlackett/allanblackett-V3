@@ -1,9 +1,9 @@
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
+    --primary: #e7b53c;
+    --primaryLight: #e7b53c;
+    --secondary: #e7b53c;
+    --secondaryLight: #e7b53c;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -91,12 +91,15 @@ body {
             transform: translateY(0);
         }
         50% {
-            transform: translateY(-1em);
+            transform: translateY(-5em);
         }
         100% {
             transform: translateY(0);
         }
     }
+    #hero-358 {
+    background-color: #1a1a1a;
+    }    
     #hero-358 .cs-background {
         /* Background Image */
         width: 100%;
@@ -342,8 +345,8 @@ body {
         border-radius: 50%;
         background-color: var(--primaryLight);
         position: absolute;
-        left: 8.125em;
-        bottom: 3.8125em;
+        left: 4.125em;
+        bottom: 6.8125em;
         z-index: 100;
         animation-name: floatAnimation2;
         animation-duration: 4s;

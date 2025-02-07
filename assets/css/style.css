@@ -195,12 +195,21 @@ body, p, span, li, a {
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
-      color: var(--headerColor);
+      color: #ffffff;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 0.5rem;
       transition: opacity 0.3s, color 0.3s;
+      background-color: var(--primary);
+      padding: 0.7em 1em;
+      border-radius: 2em;
+      transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+    #cs-navigation .cs-phone:hover {
+      background-color: #1a1a1a;
+      transition: 0.5s;
+      box-shadow: 0 0 15px #363636; /* Glowing effect */
     }
     #cs-navigation .cs-phone-icon {
       width: 1.5rem;
@@ -635,14 +644,15 @@ body, p, span, li, a {
     }
     #cs-navigation .cs-social-link {
       text-decoration: none;
-      width: 2rem;
-      height: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
       background-color: #f7f7f7;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: background-color 0.3s;
+      font-size: 1.4rem;
     }
     #cs-navigation .cs-social-link:hover {
       background-color: var(--primary);

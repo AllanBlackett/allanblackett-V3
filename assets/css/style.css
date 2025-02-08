@@ -119,7 +119,7 @@ body, p, span, li, a {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       opacity: 1;
       /* 12px - 24px */
-      border-radius: clamp(0.75rem, 2vw, 1.5rem);
+      border-radius: 2em;
       display: block;
       position: absolute;
       top: 0;
@@ -556,7 +556,7 @@ body, p, span, li, a {
       background-color: #fff;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       /* 12px - 24px */
-      border-radius: clamp(0.75rem, 2vw, 1.5rem);
+      border-radius: 3em;
       display: flex;
       align-items: center;
       position: fixed;
@@ -598,6 +598,7 @@ body, p, span, li, a {
       height: 4em;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
+      padding-left: 20px;
     }
     #cs-navigation .cs-contact-group {
       display: flex;

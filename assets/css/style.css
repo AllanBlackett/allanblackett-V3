@@ -1106,7 +1106,11 @@ body, p, span, li, a {
         right: -8.5625em;
     }
 }
-
+@media only screen and (max-width: 630px) {
+  #hero-358 .cs-topper {
+    margin-top: 1.2em;
+  }
+}
                                 
                                 
                                 

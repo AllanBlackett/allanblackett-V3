@@ -609,6 +609,7 @@ body, p, span, li, a {
     /* lp */
     #cs-navigation .cs-phone {
       font-size: 1rem;
+      font-weight: 700;
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;

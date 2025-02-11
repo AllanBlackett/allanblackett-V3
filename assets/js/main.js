@@ -45,4 +45,25 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
     }
     item.addEventListener('click', onClick)
     }
-                            
+
+// Scroll to Top Button with Smooth Animation
+const scrollToTopButton = document.getElementById('scrollToTop');
+
+// Listen for the scroll event
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopButton.classList.add('visible');
+    } else {
+        scrollToTopButton.classList.remove('visible');
+    }
+});
+
+// Smooth scroll to the top when clicked
+scrollToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});    
+    

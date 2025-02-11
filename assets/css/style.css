@@ -75,6 +75,46 @@ body, p, span, li, a {
 }
 
 /*-- -------------------------- -->
+<---     Scroll to Top Button   -->
+<--- -------------------------- -*/
+.scroll-to-top {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: #e7b53c; /* Gold color matching your theme */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  display: flex; /* Make it visible */
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0); /* Slide into view */
+  opacity: 1; /* Fully visible */
+}
+
+.scroll-to-top:hover {
+  background-color: #c99629; /* Slightly darker on hover */
+  transform: translateY(0) scale(1.1); /* Scale up slightly on hover */
+}
+
+/*-- -------------------------- -->
+<---  Scroll to Top Button End  -->
+<--- -------------------------- -*/
+
+/*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
 .logo {

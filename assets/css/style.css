@@ -648,7 +648,7 @@ body, p, span, li, a {
       text-decoration: none;
       width: 2.5rem;
       height: 2.5rem;
-      background-color: #f7f7f7;
+      background-color: #e9e9e9;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -668,7 +668,7 @@ body, p, span, li, a {
       opacity: 0.6;
       display: block;
       transition: opacity 0.3s;
-      color: #1a1a1a;
+      color: #141414;
     }
     #cs-navigation .cs-ul-wrapper {
       height: 100%;

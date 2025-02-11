@@ -16,6 +16,10 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -1291,6 +1295,7 @@ body, p, span, li, a {
           height 0.6s,
           opacity 0.3s;
       z-index: -1;
+      border-radius: 5px;
   }
   #projects-604 .cs-h3 {
       /* 20px - 24px */

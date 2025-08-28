@@ -160,7 +160,7 @@ body, p, span, li, a {
         justify-content: flex-start;
         /* push icon top the top so if the list item goes to two lines the icon stays at the top */
         align-items: flex-start;
-        gap: 0.5rem;
+        /* gap: 0.5rem; */
     }
 /*-- -------------------------- -->
 <---         Title              -->

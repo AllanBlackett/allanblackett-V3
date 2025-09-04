@@ -948,6 +948,30 @@ body, p, span, li, a {
             transform: translateY(0);
         }
     }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.7;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes ripple {
+        0% {
+            transform: scale(0.8);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
     #hero-358 {
     background-color: #1a1a1a;
     }    
@@ -1044,9 +1068,63 @@ body, p, span, li, a {
         /* 32px - 40px */
         margin: 0 auto clamp(2rem, 4vw, 2.5rem);
         /* 24px - 40px */
-        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+        margin-bottom: 0;
+        /* margin-bottom: clamp(1.75rem, 4vw, 2.5rem); */
         color:#c0c0c0
     }
+    
+    /* Availability Box Styles */
+    #hero-358 .cs-availability-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem auto 1.5rem;
+        max-width: fit-content;
+        position: relative;
+    }
+    #hero-358 .cs-availability-blob {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--secondary);
+        border-radius: 50%;
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+        animation: pulse 2s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
+    }
+    #hero-358 .cs-availability-blob::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        animation: ripple 2s infinite;
+        z-index: -1;
+    }
+    #hero-358 .cs-availability-blob::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        animation: ripple 2s infinite 1s;
+        z-index: -1;
+    }
+    #hero-358 .cs-availability-text {
+        font-size: 1rem;
+        color: var(--secondary);
+        margin: 0;
+        font-weight: 500;
+        text-align: center;
+    }
+    
     #hero-358 .cs-button-group {
         width: 100%;
         display: flex;
@@ -1223,6 +1301,7 @@ body, p, span, li, a {
     }
     
 }
+
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #hero-358 {
@@ -1242,9 +1321,23 @@ body, p, span, li, a {
         text-align: left;
         margin-left: 0;
     }
+
     #hero-358 .cs-text {
         max-width: 27.625rem;
+        margin-bottom: 0;
     }
+    
+    /* Desktop alignment for availability box */
+    #hero-358 .cs-availability-box {
+        justify-content: flex-start;
+        margin-left: 0;
+        margin-top: 1.15rem;
+        margin-bottom: 2rem;
+    }
+    #hero-358 .cs-availability-text {
+        text-align: left;
+    }
+    
     #hero-358 .cs-button-group {
         justify-content: flex-start;
     }
@@ -1255,9 +1348,21 @@ body, p, span, li, a {
         right: -8.5625em;
     }
 }
+
+/* Mobile adjustments */
 @media only screen and (max-width: 630px) {
   #hero-358 .cs-topper {
     margin-top: 1.2em;
+  }
+  
+  /* Make availability text smaller on small screens */
+  #hero-358 .cs-availability-text {
+    font-size: 0.9rem;
+  }
+  #hero-358 .cs-availability-blob {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.625rem;
   }
 }
 
@@ -2141,6 +2246,7 @@ body, p, span, li, a {
     #sbs-371 .cs-person img {
         width: 100%;
         height: auto;
+        border-radius: 10px;
     }
     #sbs-371 .cs-mask {
         width: 23.9375em;

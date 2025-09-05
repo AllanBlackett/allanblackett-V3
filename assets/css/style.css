@@ -919,7 +919,7 @@ body, p, span, li, a {
         /* Centers button */
         text-align: center;
         /* 150px - 350px */
-        padding: clamp(9rem, 25.95vw, 21.875rem) 1rem;
+        padding: clamp(9rem, 14vw, 14.875rem) 1rem;
         padding-bottom: 0;
         position: relative;
         z-index: 1;
@@ -1769,7 +1769,7 @@ body, p, span, li, a {
 /* Desktop - 1500px (Parallax Effect) */
 @media only screen and (min-width: 93.75em) {
     #RTsbsr-249 {
-        background-image: url("../images/Home/img/background1.jpg");
+        background-image: url("../images/Home/img/Designs_1_09.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

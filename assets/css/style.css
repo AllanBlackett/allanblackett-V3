@@ -772,6 +772,7 @@ body, p, span, li, a {
       background-color: #1a1a1a;
       transition: 0.5s;
       box-shadow: 0 0 15px #363636; /* Glowing effect */
+      color: var(--primary);
     }  
     #cs-navigation .cs-phone-icon {
       width: 1.5rem;
@@ -2124,7 +2125,7 @@ body, p, span, li, a {
         min-width: 9.375rem;
         padding: 0 1.5rem;
         background-color: var(--primary);
-        border-radius: 0.25rem;
+        border-radius: 10px;
         display: inline-block;
         position: relative;
         z-index: 1;
@@ -2432,7 +2433,7 @@ body, p, span, li, a {
         margin: 0;
         color: #fff;
         padding: 0 3rem;
-        border-radius: 1.875rem;
+        border-radius: 10px;
         background-color: var(--primary);
         display: inline-block;
         position: relative;
@@ -2600,237 +2601,174 @@ body, p, span, li, a {
 <--- -------------------------- -*/ 
 
 /*-- -------------------------- -->
-<---         Contact            -->
+<---          Contact           -->
 <--- -------------------------- -*/
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #contact-1970 {
+  #contact-983 {
     padding: var(--sectionPadding);
-    overflow: hidden;
     position: relative;
-    z-index: 1;
   }
-  #contact-1970 .cs-container {
+  #contact-983 .cs-container {
     width: 100%;
-    /* changes to 1280px at desktop */
-    max-width: 44rem;
+    /* changes to 1064px at tablet */
+    max-width: 34.375rem;
     margin: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    /* 40px - 80px */
-    gap: clamp(2.5rem, 5vw, 5rem);
+    gap: 2.5rem;
   }
-  #contact-1970 .cs-content {
+  #contact-983 .cs-content {
+    /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
-    max-width: 38.875rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    /* centers content horizontally, set to flex-start to left align */
     align-items: center;
-    flex-wrap: wrap;
   }
-  #contact-1970 .cs-title {
-    max-width: 51.8125rem;
+  #contact-983 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #contact-983 .cs-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.75rem;
+  }
+  #contact-983 .cs-label {
+    font-size: 1rem;
+    line-height: 1.5em;
+    width: 100%;
     color: #fff;
-  }
-  #contact-1970 .cs-text {
-    color: #f7f7f7;
-  }
-  #contact-1970 .cs-right {
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1.5rem;
-    background-color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  #contact-1970 .cs-form {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: clamp(1rem, 2vw, 1.25rem);
-    row-gap: 0.75rem;
-  }
-  #contact-1970 .cs-label {
-    font-size: 0.875rem;
-    width: 100%;
-    color: #767676;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.25rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    grid-column: span 12;
   }
-  #contact-1970 .cs-input,
-  #contact-1970 select {
+  #contact-983 .cs-input {
+    font-family: inherit;
     font-size: 1rem;
     width: 100%;
     height: 3.5rem;
-    /* prevents padding from adding to height and width */
-    box-sizing: border-box;
-    padding: 0;
     padding-left: 1.5rem;
-    background-color: #f7f7f7;
-    color: var(--bodyTextColor);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #484848;
     border: none;
-    transition: border-color 0.3s;
   }
-  #contact-1970 .cs-input:hover,
-  #contact-1970 select:hover {
-    border-color: var(--secondary);
+  #contact-983 .cs-input::placeholder {
+    padding-top: 1rem;
+    color: #fff;
+    opacity: 0.5;
   }
-  #contact-1970 .cs-input:focus,
-  #contact-1970 select:focus {
-    outline: 1px solid var(--secondary);
+  #contact-983 .cs-textarea {
+    height: 7.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
   }
-  #contact-1970 .cs-input::placeholder,
-  #contact-1970 select::placeholder {
-    color: #7d799c;
-    opacity: 0.6;
+  #contact-983 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    grid-column: span 12;
   }
-  #contact-1970 .cs-textarea {
-    font-family: inherit;
-    min-height: 5.9375rem;
-    margin-bottom: 0.75rem;
-    padding-top: 1.5rem;
-  }
-  #contact-1970 .cs-button-solid {
+  #contact-983 .cs-button-solid {
     font-size: 1rem;
-    font-weight: 700;
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-align: center;
     text-decoration: none;
-    min-width: 12.5rem;
+    font-weight: 700;
+    text-align: center;
     margin: 0;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    overflow: hidden;
     color: #fff;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
     display: inline-block;
     position: relative;
     z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    border-radius: 10px;
   }
-  #contact-1970 .cs-button-solid:before {
+  #contact-983 .cs-button-solid:before {
     content: "";
-    width: 0%;
+    position: absolute;
     height: 100%;
+    width: 0%;
     background: #000;
     opacity: 1;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
   }
-  #contact-1970 .cs-button-solid:hover:before {
+  #contact-983 .cs-button-solid:hover:before {
     width: 100%;
   }
-  #contact-1970 .cs-submit {
-    width: 100%;
-    margin: 1.5rem 0 0 0;
+  #contact-983 .cs-submit {
     border: none;
   }
-  #contact-1970 .cs-submit:hover {
+  #contact-983 .cs-submit:hover {
     cursor: pointer;
   }
-  #contact-1970 .cs-background {
+  #contact-983 .cs-background {
     width: 100%;
     height: 100%;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
   }
-  #contact-1970 .cs-background:before {
-    /* Overlay */
+  #contact-983 .cs-background:before {
+    /* background color overlay */
     content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
-    opacity: 1;
-    display: block;
     position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.9;
     top: 0;
     left: 0;
     z-index: 1;
   }
-  #contact-1970 .cs-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  #contact-983 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #contact-1970 .cs-right {
-    max-width: 36.125rem;
-    padding: 3rem 2rem;
-    border-radius: 10px;
+  #contact-983 .cs-container {
+    max-width: 66.5rem;
   }
-  #contact-1970 .cs-form {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  #contact-1970 .cs-label {
-    grid-column: span 12;
-  }
-  #contact-1970 .cs-label:nth-of-type(1),
-  #contact-1970 .cs-label:nth-of-type(2),
-  #contact-1970 .cs-label:nth-of-type(3),
-  #contact-1970 .cs-label:nth-of-type(4),
-  #contact-1970 .cs-label:nth-of-type(5),
-  #contact-1970 .cs-label:nth-of-type(6) {
+  #contact-983 .cs-label {
     grid-column: span 6;
   }
-  #contact-1970 .cs-submit {
+  #contact-983 .cs-message {
     grid-column: span 12;
   }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #contact-1970 .cs-container {
-    max-width: 80rem;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-  }
-  #contact-1970 .cs-content {
-    text-align: left;
-    align-items: flex-start;
+  #contact-983 .cs-wrapper {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-/* Desktop Parallax Effect - 1600px */
-@media only screen and (min-width: 100rem) {
-  #contact-1970 {
-    background: url("https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  #contact-1970 .cs-background img {
-    display: none;
-  }
-}
+                                
                                 
 /*-- -------------------------- -->
 <---       Contact - End        -->

@@ -28,7 +28,6 @@
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
-        <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="/index.html" class="cs-logo" aria-hidden="true">
             <img src="assets\images\logo\logoblk.webp" class="logo" alt="logo" decoding="async">
         </a>
@@ -45,18 +44,18 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="index.html" class="cs-li-link cs-active">
+                        <a href="#hero-358" class="cs-li-link cs-active">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
                         <a href="#projects-604" class="cs-li-link">
-                            Portfolio
+                            Projects
                         </a>
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li">
-                        <a href="#cs-content-831" class="cs-li-link">
+                        <a href="#RTsbs-249" class="cs-li-link">
                             What I do
                         </a>
                     </li>
@@ -66,7 +65,7 @@
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="#cta-1071" class="cs-li-link">
+                        <a href="#contact-983" class="cs-li-link">
                             Contact
                         </a>
                     </li>
@@ -88,7 +87,7 @@
             </div>
         </nav>
         <div class="cs-contact-group">
-            <a href="contact.html" class="cs-phone">
+            <a href="#contact-983" class="cs-phone">
                 <i class="fas fa-envelope cs-phone-icon" aria-hidden="true"></i>
                 GET IN TOUCH
             </a>
@@ -123,7 +122,7 @@
 </div>
             <div class="cs-button-group">
                 <a href="#projects-604" class="cs-button-solid">VIEW RESULTS</a>
-                <a href="contact.html" class="cs-button-transparent">
+                <a href="#contact-983" class="cs-button-transparent">
                     <picture class="cs-picture">
                         <img class="cs-img" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/phone-white.svg" alt="icon" width="24" height="24" aria-hidden="true">
                     </picture>
@@ -139,7 +138,6 @@
             <picture class="cs-icon-wrapper">
                 <i class="fas fa-code cs-icon" aria-hidden="true"></i>
             </picture>
-
             <!-- SVG Paint Splash-->
             <img class="cs-splash" decoding="async" src="assets\images\Home\code3.svg" alt="icon" aria-hidden="true">
 
@@ -489,54 +487,52 @@
 <!-- ============================================ -->
 
 <!-- ============================================ -->
-<!--                  Contact                     -->
+<!--                   Contact                    -->
 <!-- ============================================ -->
 
-<section id="contact-1970">
+<section id="contact-983">
     <div class="cs-container">
         <div class="cs-content">
-            <h1 class="cs-title">Ready to Work Together?</h1>
-            <p class="cs-text">
-                Whether you need a new website, ongoing updates, or marketing support, I’m here to help. Fill out the form and let’s start creating solutions that move your business forward.
-            </p>
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Ready to Work Together?</h2>
         </div>
-        <div class="cs-right">
-            <!--Form-->
-            <form class="cs-form" id="cs-form-1970" name="Contact Form" method="post">
-                <label class="cs-label">
-                    First Name
-                    <input class="cs-input" required type="text" id="first-name-1970" name="first name">
-                </label>
-                <label class="cs-label">
-                    Last Name
-                    <input class="cs-input" required type="text" id="last-name-1970" name="last name">
-                </label>
-                <label class="cs-label">
-                    Email
-                    <input class="cs-input" required type="email" id="email-1970" name="email">
-                </label>
-                <label class="cs-label">
-                    Phone
-                    <input class="cs-input" required type="tel" id="phone-1970" name="phone">
-                </label>
-                <label class="cs-label">
-                    # of Bedrooms
-                    <input class="cs-input" required type="text" id="bedrooms-1970" name="bedrooms">
-                </label>
-                <label class="cs-label">
-                    Property Address
-                    <input class="cs-input" required type="text" id="address-1970" name="address">
-                </label>
-                <button class="cs-button-solid cs-submit" type="submit">Get Estimate</button>
-            </form>
-        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-983" name="Contact Form" method="post">
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-983" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="text" id="phone-983" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="text" id="email-983" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label">
+                How did you hear about us?
+                <input class="cs-input" required type="text" id="hear-983" name="heat" placeholder="Google">
+            </label>
+            <label class="cs-label cs-message">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-983" placeholder="Write message..."></textarea>
+            </label>
+            <div class="cs-wrapper">
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            </div>
+        </form>
     </div>
+    <!--Background Image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact3.jpg">
-        <source media="(min-width: 601px)" srcset="https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact3.jpg">
-        <img loading="lazy" decoding="async" src="https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact3.jpg" alt="downtown" width="1920" height="640" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg-m.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg.jpg" alt="hair salon" width="2500" height="770">
     </picture>
 </section>
+                                
                                 
 <!-- ============================================ -->
 <!--               Contact - End                  -->

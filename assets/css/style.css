@@ -2600,291 +2600,239 @@ body, p, span, li, a {
 <--- -------------------------- -*/ 
 
 /*-- -------------------------- -->
-<---            CTA             -->
+<---         Contact            -->
 <--- -------------------------- -*/
-
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #cta-1071 {
-        padding: var(--sectionPadding);
-        background-color: #1a1a1a;
-        position: relative;
-        z-index: 1;
-    }
-    #cta-1071 .cs-container {
-        width: 100%;
-        max-width: 80rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
-    }
-    #cta-1071 .cs-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
-    }
-    #cta-1071 .cs-flex {
-        max-width: 39.375rem;
-    }
-
-    #cta-1071 .cs-title {
-        margin: 0;
-
-        color: var(--bodyTextColorWhite);
-    }
-    #cta-1071 .cs-button-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-    #cta-1071 .cs-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        color: #fff;
-        min-width: 9.375rem;
-        padding: 0 1.5rem;
-        background-color: var(--primary);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-    }
-    #cta-1071 .cs-button-solid:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-    }
-    #cta-1071 .cs-button-solid:hover:before {
-        width: 100%;
-    }
-    #cta-1071 .cs-button-transparent {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        color: #fff;
-        min-width: 9.375rem;
-        padding: 0 1.5rem;
-        background-color: transparent;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-        transition: color 0.3s;
-    }
-    #cta-1071 .cs-button-transparent:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #fff;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-    }
-    #cta-1071 .cs-button-transparent:after {
-        /* border */
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: transparent;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-        /* border: 0.5px solid #fff; */
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-        pointer-events: none;
-    }
-    #cta-1071 .cs-button-transparent:hover {
-        color: var(--primary);
-    }
-    #cta-1071 .cs-button-transparent:hover:before {
-        width: 100%;
-    }
-    #cta-1071 .cs-background {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-    #cta-1071 .cs-background:before {
-        /* background color overlay */
-        content: "";
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 100%;
-        background: #1a1a1a;
-        opacity: 0.88;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-    #cta-1071 .cs-background img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* Makes img tag act as a background image */
-        object-fit: cover;
-    }
-}
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #cta-1071 .cs-content {
-        text-align: left;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    #cta-1071 .cs-button-box {
-        flex-wrap: nowrap;
-        align-items: center;
-        flex: none;
-    }
-}                           
-
-/* Interior Button */
-#button-box-839 {
+  #contact-1970 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-1970 .cs-container {
     width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 44rem;
+    margin: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* 40px - 80px */
+    gap: clamp(2.5rem, 5vw, 5rem);
+  }
+  #contact-1970 .cs-content {
+    text-align: center;
+    width: 100%;
+    max-width: 38.875rem;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-}
-#button-box-839 .cs-button-solid {
-    text-align: center;
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    min-width: 11.25rem;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 0.5rem;
-    /* clips corners of the before element */
-    overflow: hidden;
-    margin: 0;
+  }
+  #contact-1970 .cs-title {
+    max-width: 51.8125rem;
     color: #fff;
+  }
+  #contact-1970 .cs-text {
+    color: #f7f7f7;
+  }
+  #contact-1970 .cs-right {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-1970 .cs-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    row-gap: 0.75rem;
+  }
+  #contact-1970 .cs-label {
+    font-size: 0.875rem;
+    width: 100%;
+    color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #contact-1970 .cs-input,
+  #contact-1970 select {
+    font-size: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
     padding: 0;
-    background-color: var(--secondary);
+    padding-left: 1.5rem;
+    background-color: #f7f7f7;
+    color: var(--bodyTextColor);
+    border: none;
+    transition: border-color 0.3s;
+  }
+  #contact-1970 .cs-input:hover,
+  #contact-1970 select:hover {
+    border-color: var(--secondary);
+  }
+  #contact-1970 .cs-input:focus,
+  #contact-1970 select:focus {
+    outline: 1px solid var(--secondary);
+  }
+  #contact-1970 .cs-input::placeholder,
+  #contact-1970 select::placeholder {
+    color: #7d799c;
+    opacity: 0.6;
+  }
+  #contact-1970 .cs-textarea {
+    font-family: inherit;
+    min-height: 5.9375rem;
+    margin-bottom: 0.75rem;
+    padding-top: 1.5rem;
+  }
+  #contact-1970 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 12.5rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    overflow: hidden;
+    color: #fff;
     display: inline-block;
     position: relative;
     z-index: 1;
-}
-#button-box-839 .cs-button-solid:before {
+  }
+  #contact-1970 .cs-button-solid:before {
     content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
     width: 0%;
+    height: 100%;
     background: #000;
     opacity: 1;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
-}
-#button-box-839 .cs-button-solid:hover:before {
+  }
+  #contact-1970 .cs-button-solid:hover:before {
     width: 100%;
-}
-#button-box-839 .cs-button-transparent {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    width: 11.25rem;
-    /* 46px - 56px */
-    height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    margin: 0;
-    color: var(--primaryLight);
-    padding: 0;
-    background-color: transparent;
-    box-sizing: border-box;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-#button-box-839 .cs-button-transparent:before {
-    /* white hover box */
-    content: "";
-    /* 46px - 56px */
-    width: clamp(2.875rem, 5.5vw, 3.5rem);
-    background: #fff;
-    border-radius: 1.75rem;
-    opacity: 1;
-    position: absolute;
+  }
+  #contact-1970 .cs-submit {
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+    border: none;
+  }
+  #contact-1970 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #contact-1970 .cs-background {
+    width: 100%;
+    height: 100%;
     display: block;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: -1;
-    transition:
-        width 0.3s,
-        box-shadow 0.3s;
-}
-#button-box-839 .cs-button-transparent:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #contact-1970 .cs-background:before {
+    /* Overlay */
+    content: "";
     width: 100%;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #contact-1970 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
-#button-box-839 .cs-picture {
-    /* 46px - 56px */
-    width: clamp(2.875rem, 5.5vw, 3.5rem);
-    height: clamp(2.875rem, 5.5vw, 3.5rem);
-    margin-right: 0.5rem;
-    background-color: #fff;
-    border-radius: 50%;
-    /* border: 6px solid #fff; */
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #contact-1970 .cs-right {
+    max-width: 36.125rem;
+    padding: 3rem 2rem;
+  }
+  #contact-1970 .cs-form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #contact-1970 .cs-label {
+    grid-column: span 12;
+  }
+  #contact-1970 .cs-label:nth-of-type(1),
+  #contact-1970 .cs-label:nth-of-type(2),
+  #contact-1970 .cs-label:nth-of-type(3),
+  #contact-1970 .cs-label:nth-of-type(4),
+  #contact-1970 .cs-label:nth-of-type(5),
+  #contact-1970 .cs-label:nth-of-type(6) {
+    grid-column: span 6;
+  }
+  #contact-1970 .cs-submit {
+    grid-column: span 12;
+  }
 }
-#button-box-839 .cs-image {
-    width: 0.75rem;
-    height: auto;
-}                             
-
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-1970 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  #contact-1970 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+/* Desktop Parallax Effect - 1600px */
+@media only screen and (min-width: 100rem) {
+  #contact-1970 {
+    background: url("https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #contact-1970 .cs-background img {
+    display: none;
+  }
+}
+                                
 /*-- -------------------------- -->
-<---    Call To Action - End    -->
+<---       Contact - End        -->
 <--- -------------------------- -*/
 
 /*-- -------------------------- -->
@@ -2976,6 +2924,7 @@ body, p, span, li, a {
     height: 2rem;
     border-radius: 50%;
     border: 1px solid #D2D8DF;
+    background-color: #e9e9e9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2986,9 +2935,15 @@ body, p, span, li, a {
     border-color: var(--primary);
   }
   #footer-2395 .cs-social-icon {
-    width: 0.75rem;
-    height: auto;
-    display: block;
+     height: auto;
+      opacity: 0.6;
+      display: block;
+      transition: opacity 0.3s;
+      color: #141414;
+  }
+  #footer-2395 .cs-social-link:hover .cs-social-icon {
+      opacity: 1;
+      filter: grayscale(1) brightness(10000%);
   }
   #footer-2395 .cs-service-group {
     margin-top: 3rem;

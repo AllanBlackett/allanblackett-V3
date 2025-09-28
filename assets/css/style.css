@@ -2142,7 +2142,7 @@ body, p, span, li, a {
         top: 0;
         left: 0;
         z-index: -1;
-        border-radius: 0.25rem;
+        border-radius: 10px;
         transition: width 0.3s;
     }
     #sbs-371 .cs-button-solid:hover:before {
@@ -2605,6 +2605,18 @@ body, p, span, li, a {
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
+
+#contact-983 {
+  background-image: url('https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact4.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact-983 .cs-background {
+  display: none;
+}
 @media only screen and (min-width: 0rem) {
   #contact-983 {
     padding: var(--sectionPadding);
@@ -2702,13 +2714,19 @@ body, p, span, li, a {
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: #fff;
+    border-radius: 10px;
     opacity: 1;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
   }
+
+#contact-983 .cs-button-solid:hover {
+      color: var(--primary);
+}
+
   #contact-983 .cs-button-solid:hover:before {
     width: 100%;
   }
@@ -2735,7 +2753,7 @@ body, p, span, li, a {
     height: 100%;
     width: 100%;
     background: #1a1a1a;
-    opacity: 0.9;
+    opacity: 0.5;
     top: 0;
     left: 0;
     z-index: 1;
@@ -2767,6 +2785,15 @@ body, p, span, li, a {
     justify-content: center;
     align-items: center;
   }
+}
+
+/* VALIDATION CHANGE: Form validation error styles for Allan Blackett contact form */
+#contact-983 .cs-input.error {
+    border: 2px solid red !important;
+}
+
+#contact-983 .cs-textarea.error {
+    border: 2px solid red !important;
 }
                                 
                                 

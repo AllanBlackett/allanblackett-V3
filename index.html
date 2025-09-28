@@ -121,7 +121,7 @@
     <p class="cs-availability-text">Open to full-time, contract, and/or freelance projects</p>
 </div>
             <div class="cs-button-group">
-                <a href="#projects-604" class="cs-button-solid">VIEW RESULTS</a>
+                <a href="#projects-604" class="cs-button-solid">View My Work</a>
                 <a href="#contact-983" class="cs-button-transparent">
                     <picture class="cs-picture">
                         <img class="cs-img" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/phone-white.svg" alt="icon" width="24" height="24" aria-hidden="true">
@@ -497,25 +497,25 @@
             <h2 class="cs-title">Ready to Work Together?</h2>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-983" name="Contact Form" method="post">
+        <!-- VALIDATION CHANGE: Added Formspree action and updated form structure -->
+        <form class="cs-form" id="cs-form-983" name="Contact Form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="post">
             <label class="cs-label">
-                Name
-                <input class="cs-input" required type="text" id="name-983" name="name" placeholder="Name">
+                <!-- VALIDATION CHANGE: Added red asterisk for required field -->
+                 <span style="color: red;">*</span>Name<input class="cs-input" required type="text" id="name-983" name="name" placeholder="Name">
             </label>
             <label class="cs-label">
-                Phone
+                <!-- VALIDATION CHANGE: Added red asterisk for required field -->
+                Phone <span style="color: red;">*</span>
                 <input class="cs-input" required type="text" id="phone-983" name="phone" placeholder="Phone">
             </label>
             <label class="cs-label">
-                Email
-                <input class="cs-input" required type="text" id="email-983" name="email" placeholder="Email">
-            </label>
-            <label class="cs-label">
-                How did you hear about us?
-                <input class="cs-input" required type="text" id="hear-983" name="heat" placeholder="Google">
+                <!-- VALIDATION CHANGE: Added red asterisk and changed type to email for better validation -->
+                Email <span style="color: red;">*</span>
+                <input class="cs-input" required type="email" id="email-983" name="email" placeholder="Email">
             </label>
             <label class="cs-label cs-message">
-                Message
+                <!-- VALIDATION CHANGE: Added red asterisk for required field -->
+                Message <span style="color: red;">*</span>
                 <textarea class="cs-input cs-textarea" required name="Message" id="message-983" placeholder="Write message..."></textarea>
             </label>
             <div class="cs-wrapper">
@@ -526,10 +526,10 @@
     <!--Background Image-->
     <picture class="cs-background">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg-m.jpg">
+        <source media="(max-width: 600px)" srcset="https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact4.jpg">
         <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg.jpg">
-        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg.jpg" alt="hair salon" width="2500" height="770">
+        <source media="(min-width: 601px)" srcset="https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact4.jpg">
+        <img loading="lazy" decoding="async" src="https://swd.nyc3.cdn.digitaloceanspaces.com/Allan%20Blackett/Image%20/contact4.jpg" alt="hair salon" width="2500" height="770">
     </picture>
 </section>
                                 
@@ -551,7 +551,7 @@
             <p class="cs-text">
                 Web designer specializing in website builds and marketing support for businesses across the Americas. Available for remote collaboration on web development, content management, and technical assistance projects.
             </p>
-            <div class="cs-contact-info">
+            <!-- <div class="cs-contact-info">
                 <span class="cs-header">Contact</span>
                 <a href="tel:555-555-5555" class="cs-contact-link">
                     <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/phone-w.svg" alt="icon" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
@@ -565,7 +565,7 @@
                     <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/pin-w.svg" alt="icon" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                     Servicing North & South America
                 </a>
-            </div>
+            </div> -->
             <!-- <div class="cs-social">
                 <a href="" class="cs-social-link" aria-label="visit facebook">
                     <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/face-w.svg" alt="icon" width="12" height="12" loading="lazy" decoding="async" aria-hidden="true">

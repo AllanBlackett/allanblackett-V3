@@ -214,6 +214,58 @@ body, p, span, li, a {
 <---  Scroll to Top Button End  -->
 <--- -------------------------- -*/
 
+/* SCROLL-SPY ADDITION: Add these styles to your existing CSS */
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure sections don't get hidden behind fixed header */
+section[id] {
+  /* Adjust this value based on your header height - accounting for mobile/desktop differences */
+  scroll-margin-top: 8rem; /* adjust if needed based on your header height */
+}
+
+/* SCROLL-SPY ADDITION: Active state for navigation links */
+#cs-navigation .cs-li-link.is-active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* SCROLL-SPY ADDITION: Optional underline animation for active item */
+#cs-navigation .cs-li-link {
+  position: relative;
+}
+
+#cs-navigation .cs-li-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 220ms ease;
+}
+
+#cs-navigation .cs-li-link.is-active::after {
+  width: 100%;
+}
+
+/* SCROLL-SPY ADDITION: Desktop-only scroll-spy (mobile keeps existing cs-active behavior) */
+@media only screen and (min-width: 64rem) {
+  #cs-navigation .cs-li-link.cs-active {
+    /* Remove the default active styling on desktop, let is-active handle it */
+    color: var(--headerColor);
+  }
+  
+  #cs-navigation .cs-li-link.is-active {
+    color: var(--primary);
+    font-weight: 700;
+  }
+}
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -858,9 +910,9 @@ body, p, span, li, a {
     #cs-navigation .cs-li-link:hover {
       color: var(--primary);
     }
-    #cs-navigation .cs-li-link.cs-active {
+    /* #cs-navigation .cs-li-link.cs-active {
       color: var(--primary);
-    }
+    } */
     #cs-navigation .cs-button-solid {
       font-size: 1rem;
       font-weight: 700;
@@ -2774,7 +2826,7 @@ body, p, span, li, a {
     max-width: 66.5rem;
   }
   #contact-983 .cs-label {
-    grid-column: span 6;
+    grid-column: span 4;
   }
   #contact-983 .cs-message {
     grid-column: span 12;
@@ -2795,7 +2847,13 @@ body, p, span, li, a {
 #contact-983 .cs-textarea.error {
     border: 2px solid red !important;
 }
-                                
+
+#contact-983 .cs-label span {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
                                 
 /*-- -------------------------- -->
 <---       Contact - End        -->

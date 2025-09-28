@@ -1,4 +1,4 @@
-// EXISTING NAVIGATION CODE - NO CHANGES
+// EXISTING NAVIGATION CODE - NO CHANGES TO EXISTING CODE
 // add classes for mobile navigation toggling
 var CSbody = document.querySelector("body");
 const CSnavbarMenu = document.querySelector("#cs-navigation");
@@ -139,3 +139,96 @@ document.querySelectorAll("#cs-form-983 .cs-input, #cs-form-983 .cs-textarea").f
         }
     });
 });
+
+// SCROLL-SPY ADDITION: Desktop-only scroll-spy navigation functionality
+// Only runs on desktop screens (64rem and above)
+if (window.matchMedia('(min-width: 64rem)').matches) {
+    
+    /* ============ SCROLL-SPY (ACTIVE LINK) ============ */
+    const NAV_ID        = 'cs-navigation';
+    const LINK_SELECTOR = `#${NAV_ID} a.cs-li-link[href^="#"]`;
+    const ACTIVE_LINK   = 'is-active';
+    const THRESHOLD     = 0.35;
+    const BOTTOM_MARGIN = '45%';
+
+    // Function to get current header height
+    const headerHeight = () => {
+        const nav = document.getElementById('cs-navigation');
+        return nav ? nav.offsetHeight : 0;
+    };
+
+    // Get all navigation links and create mapping
+    const links = Array.from(document.querySelectorAll(LINK_SELECTOR));
+    const linkMap = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+    
+    // Get all sections that have corresponding navigation links
+    const sections = Array.from(document.querySelectorAll('section[id]')).filter(s => linkMap.has(s.id));
+
+    // Function to set active link
+    const setActiveLink = (id) => {
+        links.forEach((a) => {
+            const isActive = a.getAttribute('href').slice(1) === id;
+            a.classList.toggle(ACTIVE_LINK, isActive);
+            if (isActive) {
+                a.setAttribute('aria-current', 'page');
+            } else {
+                a.removeAttribute('aria-current');
+            }
+        });
+    };
+
+    let observer;
+    
+    // Build intersection observer
+    const buildObserver = () => {
+        if (observer) observer.disconnect();
+        
+        observer = new IntersectionObserver((entries) => {
+            let bestEntry = null;
+            
+            // Find the entry with the highest intersection ratio
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
+                    bestEntry = entry;
+                }
+            }
+            
+            // Set active link based on best intersecting section
+            if (bestEntry) {
+                setActiveLink(bestEntry.target.id);
+            }
+        }, {
+            root: null,
+            threshold: [THRESHOLD],
+            rootMargin: `-${headerHeight()}px 0px -${BOTTOM_MARGIN} 0px`
+        });
+
+        // Observe all sections
+        sections.forEach(section => observer.observe(section));
+    };
+
+    // Initialize observer
+    buildObserver();
+
+    // Rebuild observer on window resize (header height might change)
+    window.addEventListener('resize', () => {
+        clearTimeout(buildObserver._timeout);
+        buildObserver._timeout = setTimeout(buildObserver, 120);
+    });
+
+    // Set initial active state (handles mid-page loads and refreshes)
+    if (sections.length > 0) {
+        const currentHeaderHeight = headerHeight();
+        const nearest = sections
+            .map(section => ({
+                id: section.id,
+                distance: Math.abs(section.getBoundingClientRect().top - currentHeaderHeight)
+            }))
+            .sort((a, b) => a.distance - b.distance)[0];
+        
+        if (nearest) {
+            setActiveLink(nearest.id);
+        }
+    }
+}

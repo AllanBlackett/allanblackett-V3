@@ -2784,6 +2784,7 @@ body, p, span, li, a {
   #contact-1970 .cs-right {
     max-width: 36.125rem;
     padding: 3rem 2rem;
+    border-radius: 10px;
   }
   #contact-1970 .cs-form {
     display: grid;
